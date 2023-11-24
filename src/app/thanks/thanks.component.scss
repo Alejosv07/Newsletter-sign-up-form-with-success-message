@@ -1,0 +1,33 @@
+.modalWidth{
+    width: 36vw;
+}
+
+.ModalP {
+    padding: 4.5rem;
+}
+
+.modal-gap>*{
+    padding-bottom: 0.5em;
+}
+@media screen and (max-width: 768px) {
+    .modalWidth{
+        width: 100%;
+    }
+
+    .ModalP {
+        padding: 1.5rem;
+        height: 100%;
+        align-content: center;
+    }
+    .text-6xl{
+        font-size: 2.50rem;
+    }
+
+    .modalWidth{
+        height: 100%;
+    }
+
+    .rounded-4xl{
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$Tomato: hsl(4, 100%, 67%);
+$Dark-Slat-Grey: hsl(234, 29%, 20%);
+$Charcoal-Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+$Pink: #FFE8E7;
+
+
+
+* {
+    box-sizing: border-box;
+    color: $Dark-Slat-Grey;
+}
+
+.bgDark-Slat-Grey{
+    background-color: $Dark-Slat-Grey;
+}
+
+app-root {
+    min-width: 100vw;
+    height: 100vh;
+    background-color: $Dark-Slat-Grey;
+}
+
+app-form-contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-Tomato {
+    background-color: $Tomato;
+}
+
+.text-Tomato {
+    color: $Tomato;
+}
+
+.bg-pink {
+    background-color: $Pink;
+}
+
+.border-Tomato {
+    border-color: $Tomato;
+    outline-color: $Tomato;
+}
+
+.border-Tomato:focus {
+    outline-color: $Tomato;
+}
+
+.blur-out{
+    animation: blur-out 1.2s linear both
+}
+
+.blur-in{
+    animation: blur-in 0.5s linear both;
+    animation-delay: 0.2s;
+}
+.blur-in_panel{
+    animation: blur-in 0.2s linear both;
+}
+.blur-out_panel{
+    animation: blur-out 1.2s linear both;
+}
+
+.btnCTA{
+    padding: 0.5em;
+    color: white;
+    background-color: $Dark-Slat-Grey;
+}
+
+.rounded-4xl{
+    border-radius: 2.5rem;
+}
+
+@keyframes blur-out {
+    0% {
+        filter: blur(.01px);
+    }
+
+    100% {
+        filter: blur(12px);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes blur-in {
+    0% {
+        filter: blur(12px);
+    }
+    
+    100% {
+        filter: blur(0);
+        opacity: 1;
+        pointer-events: initial;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="rounded-4xl modalWidth" [ngClass]="{'blur-out':dontshowModal, 'blur-in':!dontshowModal}">
+    <article class="flex justify-items-start items-center flex-wrap bg-white rounded-4xl ModalP modal-gap">
+        <figure style="margin-bottom: 2.5em;">
+            <img src="{{imagePath}}" alt="">
+        </figure>
+        <p class="text-6xl font-bold title pb-6">{{title}}</p>
+        <p>{{message1}} <span class='font-bold'>{{email}}</span>{{message2}}</p>
+        <button class="btnCTA mt-6 rounded cursor-pointer w-full" (click)="closeModal()">{{btnCTA}}</button>
+    </article>
+</div>

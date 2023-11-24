@@ -1,0 +1,4 @@
+<main class="main relative w-full h-full flex justify-center items-center">
+    <app-form-contact-us></app-form-contact-us>
+    <app-thanks *ngIf="!dontshowModal" class="absolute flex justify-center items-center top-0 right-0 bgDark-Slat-Grey w-full h-full" [ngClass]="{'blur-out_panel':dontshowModal, 'blur-in_panel':!dontshowModal}"></app-thanks>
+</main>

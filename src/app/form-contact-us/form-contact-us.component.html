@@ -1,0 +1,33 @@
+<form class="form inline-flex flex-wrap-reverse bg-white  rounded-4xl form items-start gap-12">
+    <aside class="flex flex-col pt-6 p-2em md:ml-6 self-center">
+        <h1 class="text-6xl font-bold title pb-6">{{title}}</h1>
+        <p class="pb-4">{{messageCTA}}</p>
+        <ul class="flex flex-col gap-2 pb-6">
+            <li class="flex gap-4">
+                <figure><img src="{{imagePathList}}" alt="icon-list"></figure>
+                <p>{{messageListOne}}</p>
+            </li>
+            <li class="flex gap-4">
+                <figure><img src="{{imagePathList}}" alt="icon-list"></figure>
+                <p>{{messageListTwo}}</p>
+            </li>
+            <li class="flex gap-4">
+                <figure><img src="{{imagePathList}}" alt="icon-list"></figure>
+                <p>{{messageListThree}}</p>
+            </li>
+        </ul>
+        <section>
+            <div class=" flex justify-between pb-4">
+                <label for="inputText">{{labelMessage}}</label>
+                <span class="text-Tomato" *ngIf="!inputText.valid">{{errorMessage}}</span>
+            </div>
+            <input type="email" [ngClass]="{'bg-pink text-Tomato border-Tomato':inputText.status == 'INVALID' && inputText.touched}" class="border rounde border-slate-300 w-full p-2" [formControl]="inputText" placeholder="email@company.com">
+        </section>
+        <input type="button" class="btnCTA mt-6 rounded cursor-pointer" value="{{btnTextCTA}}" (click)="post()">
+    </aside>
+    <aside>
+        <figure>
+            <img src="{{backgroundAsideRight}}" class="imgBackForm" alt="background">
+        </figure>
+    </aside>
+</form>

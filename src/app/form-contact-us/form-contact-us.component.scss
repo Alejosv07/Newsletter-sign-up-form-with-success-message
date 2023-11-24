@@ -1,0 +1,53 @@
+@import '../../styles.scss';
+
+.title {
+    font-size: 3.30rem;
+}
+
+.form>* {
+    width: 400px;
+}
+
+.p-2em {
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .form>* {
+        width: auto;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .imgBackForm {
+        content: url("../../assets/images/illustration-sign-up-mobile.svg");
+    }
+
+    .p-2em {
+        padding: 2em;
+    }
+
+    .form {
+        width: 320px;
+    }
+
+    .rounded-4xl {
+        border-radius: 0;
+    }
+
+    app-form-contact-us {
+        height: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .main{
+        display: block;
+    }
+
+    .ml-6{
+        margin: 0;
+    }
+}
